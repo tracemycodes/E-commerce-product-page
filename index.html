@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Product Page</title>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <nav class="nav-component">
+          <ul class="nav-list-left nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-icon">
+                <img src="./images/icon-menu.svg" alt="menu" />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-logo">
+                <img src="./images/logo.svg" alt="logo" />
+              </a>
+            </li>
+          </ul>
+          <ul class="nav-list-right nav-list">
+            <li class="nav-item cart-item">
+              <a href="#" class="nav-cart">
+                <img src="./images/icon-cart.svg" alt="menu" />
+              </a>
+              <span class="item-no"></span>
+            </li>
+            <li class="nav-item">
+              <a href="#">
+                <img
+                  src="./images/image-avatar.png"
+                  class="nav-avatar"
+                  alt="logo"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="product-img">
+        <div class="product-carousel">
+          <img src="./images/image-product-1.jpg" class="product-1" alt="" />
+        </div>
+        <div class="prev-icon">
+          <img src="./images/icon-previous.svg" alt="" />
+        </div>
+        <div class="next-icon">
+          <img src="./images/icon-next.svg" alt="" />
+        </div>
+      </section>
+      <section class="product-info">
+        <h1>SNEAKER COMPANY</h1>
+        <article>
+          <h2>Fall Limited Edition Sneakers</h2>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </article>
+        <div class="price-div">
+          <p class="product-price">$125.00</p>
+          <span class="price-percentage">50%</span>
+          <p class="product-slash">$250.00</p>
+        </div>
+        <div class="price-counter">
+          <img class="minus-count" src="./images/icon-minus.svg" alt="" />
+          <p class="price-count">0</p>
+          <img class="plus-count" src="./images/icon-plus.svg" alt="" />
+        </div>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
