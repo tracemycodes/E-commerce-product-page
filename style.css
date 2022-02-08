@@ -9,7 +9,7 @@ body {
   /* width: 100vw; */
 }
 .main {
-  max-width: 900px;
+  max-width: 49.375rem;
   width: 100%;
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: "Kumbh Sans", sans-serif;
@@ -39,7 +39,7 @@ header {
 }
 .cart-item > .item-no {
   /* border: 1px solid orangered; */
-  background-color: orangered;
+  background-color: hsl(26, 100%, 55%);
   top: -30%;
   right: 0;
   height: 0.65rem;
@@ -65,18 +65,20 @@ header {
   width: 100%;
 }
 .product-carousel {
-  /* border: 2px solid blue; */
   height: 21.8rem;
   width: 100%;
+  overflow: hidden;
 }
 .product-carousel > img {
   width: 100%;
   height: 21.8rem;
-  /* display: none; */
   object-fit: cover;
   object-position: center;
+  transition: all linear 1s;
 }
-
+.product-carousel:hover img {
+  transform: scale(1.2);
+}
 .prev-icon,
 .next-icon {
   position: absolute;
@@ -95,10 +97,25 @@ header {
 .next-icon {
   right: 1.2rem;
 }
-
+.product-thumbnail {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.3rem 0;
+}
+.thumbnail-img {
+  width: 4rem;
+  height: 4rem;
+}
+.thumbnail-img img {
+  width: 100%;
+  border-radius: 6px;
+}
 .product-info {
-  /* border: 2px solid green; */
+  /* border: 2px solid rgb(233, 124, 8); */
   padding: 1.8rem;
+  /* padding: 2rem; */
+  /* height: 80%; */
 }
 .product-info h1 {
   font-size: 0.9rem;
@@ -120,17 +137,21 @@ article h2 {
 article p {
   font-size: 1.1rem;
   line-height: 2.85ch;
+  /* font-weight: 400; */
+  font-weight: 400;
+  color: hsl(221, 9%, 64%);
   /* letter-spacing: 0.05ch; */
   /* border: 2px solid green; */
 }
 .price-div {
+  /* border: 2px solid mediumspringgreen; */
   margin-top: 1.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .price-div .product-price {
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 .price-div .price-percentage {
@@ -142,4 +163,165 @@ article p {
   background-color: hsl(25, 100%, 94%);
   border-radius: 5px;
   padding: 0.35rem 0.7rem;
+}
+.price-div .product-slash {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: line-through;
+  color: hsl(220, 14%, 75%);
+}
+.price-counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1.3rem;
+  border-radius: 10px;
+  /* border: 2px solid blueviolet; */
+  background-color: hsl(223, 64%, 98%);
+}
+.price-counter .price-count {
+  font-weight: bolder;
+}
+button {
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 10px;
+  border: none;
+}
+button * {
+  margin: 0 0.8rem;
+}
+.button img {
+  fill: white;
+  color: white;
+}
+@media (min-width: 670px) {
+  .nav-list-left .nav-icon {
+    display: none;
+  }
+  .product-container {
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 49.375rem;
+    width: 100%;
+    margin: 1.8rem auto;
+    height: 470px;
+  }
+  .product-img {
+    /* border: 2px solid rgb(16, 17, 16); */
+    position: relative;
+    /* max-width: 315px; */
+    width: 100%;
+    height: 470px;
+    padding: 2rem;
+  }
+  .product-carousel {
+    width: 317px;
+    height: 317px;
+    border-radius: 1rem;
+  }
+  .product-carousel > img {
+    height: 19.8125rem;
+    border-radius: 1rem;
+  }
+  .prev-icon,
+  .next-icon {
+    display: none;
+  }
+  .product-thumbnail {
+    display: flex;
+  }
+  .product-info {
+    /* border: 2px solid maroon; */
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .product-info h1 {
+    /* border: 2px solid rebeccapurple; */
+    /* display: block; */
+    align-self: flex-start;
+    font-size: 0.6rem;
+    letter-spacing: 0.2ch;
+    /* margin-bottom: 1rem; */
+  }
+  article * {
+    margin: 0.85rem 0;
+  }
+  article h2 {
+    font-size: 1.9rem;
+    font-weight: bolder;
+  }
+  article p {
+    font-size: 0.75rem;
+    line-height: 2.85ch;
+    font-weight: 400;
+  }
+  .price-div {
+    /* border: 2px solid mediumspringgreen; */
+    display: block;
+    width: 100%;
+    margin-top: 0;
+  }
+  .price-div .product-price {
+    font-size: 1.2rem;
+    display: inline-block;
+    /* border: 2px solid red; */
+  }
+  .price-div .price-percentage {
+    /* border: 2px solid red; */
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: inline;
+    /* height: 100%; */
+    margin: auto 0.6rem;
+    padding: 0.15rem 0.3rem;
+    /* clear: both; */
+    /* clear */
+    /* background-color: d; */
+  }
+  .price-div .product-slash {
+    font-size: 0.7rem;
+    /* border: 2px solid blue; */
+    margin-top: 0.7rem;
+  }
+  .product-buttons {
+    /* border: 2px solid darkblue; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.2rem;
+  }
+  .price-counter {
+    /* border: 2px solid yellow; */
+    display: inline-flex;
+    /* align-self: start; */
+    padding: 0.7rem;
+    width: 35%;
+    margin-top: 0rem;
+  }
+  .price-counter .price-count {
+    font-weight: bolder;
+  }
+  button {
+    width: 60%;
+    margin-top: 0rem;
+    padding: 0.7rem;
+    display: inline-flex;
+    font-weight: 700;
+    font-size: 0.7rem;
+  }
 }

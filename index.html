@@ -12,7 +12,7 @@
       <header>
         <nav class="nav-component">
           <ul class="nav-list-left nav-list">
-            <li class="nav-item">
+            <li class="nav-item nav-icon">
               <a href="#" class="nav-icon">
                 <img src="./images/icon-menu.svg" alt="menu" />
               </a>
@@ -42,38 +42,60 @@
           </ul>
         </nav>
       </header>
-      <section class="product-img">
-        <div class="product-carousel">
-          <img src="./images/image-product-1.jpg" class="product-1" alt="" />
-        </div>
-        <div class="prev-icon">
-          <img src="./images/icon-previous.svg" alt="" />
-        </div>
-        <div class="next-icon">
-          <img src="./images/icon-next.svg" alt="" />
-        </div>
-      </section>
-      <section class="product-info">
-        <h1>SNEAKER COMPANY</h1>
-        <article>
-          <h2>Fall Limited Edition Sneakers</h2>
-          <p>
-            These low-profile sneakers are your perfect casual wear companion.
-            Featuring a durable rubber outer sole, they’ll withstand everything
-            the weather can offer.
-          </p>
-        </article>
-        <div class="price-div">
-          <p class="product-price">$125.00</p>
-          <span class="price-percentage">50%</span>
-          <p class="product-slash">$250.00</p>
-        </div>
-        <div class="price-counter">
-          <img class="minus-count" src="./images/icon-minus.svg" alt="" />
-          <p class="price-count">0</p>
-          <img class="plus-count" src="./images/icon-plus.svg" alt="" />
-        </div>
-      </section>
+      <div class="product-container">
+        <section class="product-img">
+          <div class="product-carousel">
+            <img src="./images/image-product-1.jpg" class="product-1" alt="" />
+          </div>
+          <div class="prev-icon">
+            <img src="./images/icon-previous.svg" alt="" />
+          </div>
+          <div class="next-icon">
+            <img src="./images/icon-next.svg" alt="" />
+          </div>
+          <div class="product-thumbnail">
+            <div class="thumbnail-img">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+            </div>
+            <div class="thumbnail-img">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+            </div>
+            <div class="thumbnail-img">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+            </div>
+            <div class="thumbnail-img">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="product-info">
+          <h1>SNEAKER COMPANY</h1>
+          <article>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+          </article>
+          <div class="price-div">
+            <p class="product-price">$125.00</p>
+            <span class="price-percentage">50%</span>
+            <p class="product-slash">$250.00</p>
+          </div>
+          <div class="product-buttons">
+            <div class="price-counter">
+              <img class="minus-count" src="./images/icon-minus.svg" alt="" />
+              <p class="price-count">0</p>
+              <img class="plus-count" src="./images/icon-plus.svg" alt="" />
+            </div>
+            <button class="button">
+              <img src="./images/icon-cart.svg" alt="" />
+              <p>Add to cart</p>
+            </button>
+          </div>
+        </section>
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>
