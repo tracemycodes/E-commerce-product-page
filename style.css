@@ -16,6 +16,62 @@ header {
   align-items: center;
   height: 4.9375rem;
   color: white;
+  border-bottom: 1.5px solid rgba(128, 128, 128, 0.254);
+}
+.cart-modal {
+  position: absolute;
+  border: 2px solid green;
+  width: 17.5rem;
+  /* width: 15rem; */
+  /* width: 100%; */
+  /* max-width: 22rem; */
+  padding: 0.8rem;
+  /* width: 100px; */
+  color: black;
+  right: 0;
+  top: 85%;
+  background-color: white;
+  z-index: 2;
+}
+.cart-modal button {
+  width: 100%;
+  /* margin: 0 auto; */
+  /* margin-bottom: 1rem; */
+  padding: 0.7rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: white;
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 5px;
+  border: none;
+}
+.cart-modal-body {
+  /* border: 2px solid red; */
+  padding: 1rem 0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.cart-modal-body > img {
+  border: 2px solid magenta;
+  width: 1.2rem;
+  height: 1.2rem;
+  align-self: center;
+}
+.cart-modal-text {
+  border: 2px solid green;
+  font-size: 0.75rem;
+}
+.cart-modal-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-right: 0.7rem;
+}
+.cart-modal-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 .nav-component {
   display: flex;
@@ -188,7 +244,7 @@ article p {
 .price-counter .price-count {
   font-weight: bolder;
 }
-button {
+.product-buttons button {
   width: 100%;
   margin-top: 1.4rem;
   padding: 1.3rem;
@@ -202,7 +258,7 @@ button {
   border-radius: 10px;
   border: none;
 }
-button * {
+.product-buttons button * {
   margin: 0 0.8rem;
 }
 .button img {
@@ -229,7 +285,7 @@ button * {
   .price-counter .price-count {
     font-weight: bolder;
   }
-  button {
+  .product-buttons button {
     width: 60%;
     margin-top: 0rem;
     margin-left: 20px;
@@ -338,7 +394,7 @@ button * {
   .price-counter .price-count {
     font-weight: bolder;
   }
-  button {
+  .product-buttons button {
     width: 100%;
     font-size: 0.7rem;
     margin-top: 0.5rem;
