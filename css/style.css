@@ -94,6 +94,7 @@ header {
 }
 .nav-list-center .nav-item {
   margin: 0 0.4rem;
+  margin-bottom: -3px;
   font-size: 0.75rem;
   display: none;
   height: 100%;
@@ -104,6 +105,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: hsl(221, 9%, 64%);
+}
+.nav-item .nav-link:hover {
+  color: rgba(0, 0, 0, 0.775);
 }
 .nav-list-center .nav-item:hover {
   border-bottom: 2px solid hsl(26, 100%, 55%);
@@ -122,6 +127,8 @@ header {
   width: 0.85rem;
   border-radius: 2rem;
   position: absolute;
+  font-size: 0.55rem;
+  text-align: center;
 }
 .nav-list {
   align-items: center;
