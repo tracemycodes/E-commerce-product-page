@@ -16,4 +16,7 @@ class CartOperation {
     }
     this.count = amount;
   }
+  productCount(num) {
+    
+  }
 }
