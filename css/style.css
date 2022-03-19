@@ -207,6 +207,14 @@ header {
   display: none;
 }
 
+#lightbox-product .light-prev-icon {
+  display: flex;
+}
+
+#lightbox-product .light-next-icon {
+  display: flex;
+}
+
 #lightbox-product .product-carousel {
   height: 23.8rem;
   width: 100%;

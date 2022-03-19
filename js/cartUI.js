@@ -4,6 +4,10 @@ class CartUI {
   }
   updateCount(num) {
     this.count.textContent = num
-    document.querySelector('.item-no').textContent = num.toString()
+    
+  }
+  addToCart(num) {
+    document.querySelector('.item-no').textContent = num
+    this.count.textContent = 0
   }
 }
