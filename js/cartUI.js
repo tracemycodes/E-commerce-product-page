@@ -1,7 +1,7 @@
 class CartUI {
   constructor(count) {
     this.count = count;
-    this.lightProductCarousel = document.querySelector('.light-product-carousel');
+    this.lightProductCarousel = document.querySelector('.light-product-carousel').children;
   }
   updateCount(num) {
     this.count.textContent = num
@@ -12,9 +12,11 @@ class CartUI {
     this.count.textContent = 0
   }
   displayLightbox(index) {
-    [...this.lightProductCarousel.children].forEach(productImg => {
+    const lightProductItems = [...this.lightProductCarousel]
+    lightProductItems.forEach(productImg => {
       productImg.classList.remove('product-active')
     })
-    [...this.lightProductCarousel.children][index].classList.add('product-active')
+    // console.log(lightProductItems, index);
+    lightProductItems[index].classList.add('product-active')
   }
 }
