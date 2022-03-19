@@ -18,7 +18,7 @@ class CartOperation {
     }
     this.count = amount;
   }
-  productCount(num) {
+  productCount(num = 0) {
     this.lightboxCount = num
   }
 }

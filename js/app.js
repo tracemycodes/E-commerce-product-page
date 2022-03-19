@@ -4,8 +4,10 @@ const UIminus = document.querySelector(".minus-count"),
   UIbtn = document.querySelector(".button"),
   UIthumbnail = document.querySelectorAll(".thumbnail-product"),
   lightBoxThumbnail = document.querySelector(".light-product-thumbnail"),
-  prevIcon = document.querySelectorAll(".prev-icon"),
-  nextIcon = document.querySelectorAll(".next-icon");
+  lightPrevIcon = document.querySelector(".light-prev-icon"),
+  lightNextIcon = document.querySelector(".light-next-icon"),
+  prevIcon = document.querySelector(".prev-icon"),
+  nextIcon = document.querySelector(".next-icon");
 // console.log(prevIcon, nextIcon);
 
 // console.log(UIthumbnail);
@@ -60,40 +62,36 @@ lightThumbnail.forEach((item, index) => {
   });
 });
 
-prevIcon.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    // console.log("object");
-    e.preventDefault();
-    let presentCount;
-    console.log(cartOperation.lightboxCount);
-    
-    if (cartOperation.lightboxCount == 0) {
-      presentCount = lightThumbnail.length - 1
-      // console.log(presentCount, lightThumbnail.length);
-    } else {
-      presentCount = cartOperation.lightboxCount - 1;
-    }
+lightNextIcon.addEventListener("click", (e) => {
+  console.log("object")
+  e.preventDefault();
+  let presentCount;
+  console.log(cartOperation.lightboxCount);
 
-    cartOperation.productCount(presentCount);
-    cartUI.displayLightbox(cartOperation.lightboxCount);
-  });
+  if (cartOperation.lightboxCount == 0) {
+    presentCount = lightThumbnail.length - 1;
+    // console.log(presentCount, lightThumbnail.length);
+  } else {
+    presentCount = cartOperation.lightboxCount - 1;
+  }
+
+  cartOperation.productCount(presentCount);
+  cartUI.displayLightbox(cartOperation.lightboxCount);
 });
 
-nextIcon.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    // console.log("object");
-    e.preventDefault();
-    let presentCount;
-    console.log(cartOperation.lightboxCount);
-    
-    if (cartOperation.lightboxCount == 0) {
-      presentCount = lightThumbnail.length - 1
-      // console.log(presentCount, lightThumbnail.length);
-    } else {
-      presentCount = cartOperation.lightboxCount - 1;
-    }
+lightPrevIcon.addEventListener("click", (e) => {
+  // console.log("object");
+  e.preventDefault();
+  let presentCount;
+  console.log(cartOperation.lightboxCount);
 
-    cartOperation.productCount(presentCount);
-    cartUI.displayLightbox(cartOperation.lightboxCount);
-  });
+  if (cartOperation.lightboxCount == 0) {
+    presentCount = lightThumbnail.length - 1;
+    // console.log(presentCount, lightThumbnail.length);
+  } else {
+    presentCount = cartOperation.lightboxCount - 1;
+  }
+
+  cartOperation.productCount(presentCount);
+  cartUI.displayLightbox(cartOperation.lightboxCount);
 });
