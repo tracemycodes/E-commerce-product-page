@@ -38,7 +38,6 @@ UIbtn.addEventListener("click", (e) => {
 });
 
 UIthumbnail.forEach((item, index) => {
-  // console.log(item);
   item.addEventListener("click", (e) => {
     document.getElementById("lightbox-product").style.display = "flex";
     document.querySelector(".light-prev-icon").style.display = "flex";
@@ -51,8 +50,6 @@ UIthumbnail.forEach((item, index) => {
 
 const lightThumbnail = [...lightBoxThumbnail.children];
 
-// console.log(lightThumbnail);
-
 lightThumbnail.forEach((item, index) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
@@ -63,35 +60,56 @@ lightThumbnail.forEach((item, index) => {
 });
 
 lightNextIcon.addEventListener("click", (e) => {
-  console.log("object")
   e.preventDefault();
   let presentCount;
-  console.log(cartOperation.lightboxCount);
-
-  if (cartOperation.lightboxCount == 0) {
-    presentCount = lightThumbnail.length - 1;
-    // console.log(presentCount, lightThumbnail.length);
+  if (cartOperation.lightboxCount >= lightThumbnail.length - 1) {
+    presentCount = 0;
   } else {
-    presentCount = cartOperation.lightboxCount - 1;
+    presentCount = cartOperation.lightboxCount + 1;
   }
-
   cartOperation.productCount(presentCount);
   cartUI.displayLightbox(cartOperation.lightboxCount);
 });
 
 lightPrevIcon.addEventListener("click", (e) => {
-  // console.log("object");
   e.preventDefault();
   let presentCount;
-  console.log(cartOperation.lightboxCount);
-
   if (cartOperation.lightboxCount == 0) {
     presentCount = lightThumbnail.length - 1;
-    // console.log(presentCount, lightThumbnail.length);
   } else {
     presentCount = cartOperation.lightboxCount - 1;
   }
-
   cartOperation.productCount(presentCount);
   cartUI.displayLightbox(cartOperation.lightboxCount);
+});
+
+prevIcon.addEventListener("click", (e) => {
+  console.log("object");
+  e.preventDefault();
+  let presentCount;
+
+  if (cartOperation.thumbnailIndex == 0) {
+    presentCount = lightThumbnail.length - 1;
+  } else {
+    presentCount = cartOperation.thumbnailIndex - 1;
+  }
+
+  cartOperation.catalogCount(presentCount);
+  cartUI.thumbnailBox(cartOperation.thumbnailIndex);
+});
+
+nextIcon.addEventListener("click", (e) => {
+  console.log("object");
+  e.preventDefault();
+  let presentCount;
+
+  if (cartOperation.thumbnailIndex >= lightThumbnail.length - 1) {
+    presentCount = 0;
+  } else {
+    presentCount = cartOperation.thumbnailIndex + 1;
+  }
+
+  // console.log(presentCount);
+  cartOperation.catalogCount(presentCount);
+  cartUI.thumbnailBox(cartOperation.thumbnailIndex);
 });

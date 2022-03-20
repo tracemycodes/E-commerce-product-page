@@ -2,6 +2,7 @@ class CartOperation {
   constructor(thumbnail) {
     this.count;
     this.lightboxCount;
+    this.thumbnailIndex = 0;
     this.thumbnail = thumbnail.length;
   }
   minusCount(count){
@@ -18,7 +19,10 @@ class CartOperation {
     }
     this.count = amount;
   }
-  productCount(num = 0) {
+  productCount(num) {
     this.lightboxCount = num
+  }
+  catalogCount(num) {
+    this.thumbnailIndex = num
   }
 }
