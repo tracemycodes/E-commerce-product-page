@@ -8,7 +8,9 @@ const UIminus = document.querySelector(".minus-count"),
   lightNextIcon = document.querySelector(".light-next-icon"),
   prevIcon = document.querySelector(".prev-icon"),
   nextIcon = document.querySelector(".next-icon"),
-  closeIcon = document.querySelector(".fa-xmark");
+  closeIcon = document.querySelector(".close-icon"),
+  menuBtn = document.querySelector('.menu-btn'),
+  menuCloseBtn = document.querySelector('.menu-close');
 // console.log(closeIcon);
 
 // console.log(UIthumbnail);
@@ -112,5 +114,16 @@ nextIcon.addEventListener("click", (e) => {
 
 closeIcon.addEventListener('click', (e) => {
   e.preventDefault()
+  console.log("object");
   document.getElementById("lightbox-product").style.display = "none";
+})
+
+menuBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  document.querySelector('.side-navbar').classList.add('active-sidebar');
+})
+
+menuCloseBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  document.querySelector('.side-navbar').classList.remove('active-sidebar');
 })
