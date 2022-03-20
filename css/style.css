@@ -150,7 +150,23 @@ header {
   height: 21.8rem;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
+
+.thumbnail-Index {
+  overflow: hidden;
+}
+
+.thumbnail-Index > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.thumbnail-Index > .product-active {
+  display: block;
+}
+
 .product-carousel > img {
   width: 100%;
   object-fit: cover;
