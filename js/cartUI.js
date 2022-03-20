@@ -17,7 +17,6 @@ class CartUI {
     lightProductItems.forEach(productImg => {
       productImg.classList.remove('product-active')
     })
-    // console.log(lightProductItems, index);
     lightProductItems[index].classList.add('product-active')
   }
   thumbnailBox(index) {
@@ -25,7 +24,6 @@ class CartUI {
     thumbnailProductItems.forEach(productImg => {
       productImg.classList.remove('product-active')
     })
-    // console.log(lightProductItems, index);
     thumbnailProductItems[index].classList.add('product-active')
   }
-}thumbnail
+}

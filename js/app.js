@@ -7,8 +7,9 @@ const UIminus = document.querySelector(".minus-count"),
   lightPrevIcon = document.querySelector(".light-prev-icon"),
   lightNextIcon = document.querySelector(".light-next-icon"),
   prevIcon = document.querySelector(".prev-icon"),
-  nextIcon = document.querySelector(".next-icon");
-// console.log(prevIcon, nextIcon);
+  nextIcon = document.querySelector(".next-icon"),
+  closeIcon = document.querySelector(".fa-xmark");
+// console.log(closeIcon);
 
 // console.log(UIthumbnail);
 
@@ -53,7 +54,6 @@ const lightThumbnail = [...lightBoxThumbnail.children];
 lightThumbnail.forEach((item, index) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
-    // console.log(item, index);
     cartOperation.productCount(index);
     cartUI.displayLightbox(cartOperation.lightboxCount);
   });
@@ -84,7 +84,6 @@ lightPrevIcon.addEventListener("click", (e) => {
 });
 
 prevIcon.addEventListener("click", (e) => {
-  console.log("object");
   e.preventDefault();
   let presentCount;
 
@@ -102,14 +101,16 @@ nextIcon.addEventListener("click", (e) => {
   console.log("object");
   e.preventDefault();
   let presentCount;
-
   if (cartOperation.thumbnailIndex >= lightThumbnail.length - 1) {
     presentCount = 0;
   } else {
     presentCount = cartOperation.thumbnailIndex + 1;
   }
-
-  // console.log(presentCount);
   cartOperation.catalogCount(presentCount);
   cartUI.thumbnailBox(cartOperation.thumbnailIndex);
 });
+
+closeIcon.addEventListener('click', (e) => {
+  e.preventDefault()
+  document.getElementById("lightbox-product").style.display = "none";
+})
