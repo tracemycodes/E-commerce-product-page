@@ -69,11 +69,11 @@ header {
   background-color: white;
   z-index: 2;
   box-shadow: 0px 10px 15px 3px rgba(0, 0, 0, 0.1);
-  display: none;
 }
 .cart-modal h3 {
   margin: 0.8rem;
   color: hsl(220, 13%, 13%);
+  font-size: 1rem;
 }
 .cart-modal button {
   width: calc(100% - 1.6rem);
