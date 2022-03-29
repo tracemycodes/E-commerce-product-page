@@ -10,8 +10,11 @@ const UIminus = document.querySelector(".minus-count"),
   nextIcon = document.querySelector(".next-icon"),
   closeIcon = document.querySelector(".close-icon"),
   menuBtn = document.querySelector('.menu-btn'),
-  menuCloseBtn = document.querySelector('.menu-close');
-// console.log(closeIcon);
+  menuCloseBtn = document.querySelector('.menu-close'),
+  shopCart = document.querySelector('.cart-item');
+console.log(shopCart);
+
+const lightThumbnail = [...lightBoxThumbnail.children];
 
 // console.log(UIthumbnail);
 
@@ -51,7 +54,6 @@ UIthumbnail.forEach((item, index) => {
   });
 });
 
-const lightThumbnail = [...lightBoxThumbnail.children];
 
 lightThumbnail.forEach((item, index) => {
   item.addEventListener("click", (e) => {
@@ -114,7 +116,6 @@ nextIcon.addEventListener("click", (e) => {
 
 closeIcon.addEventListener('click', (e) => {
   e.preventDefault()
-  console.log("object");
   document.getElementById("lightbox-product").style.display = "none";
 })
 
@@ -126,4 +127,10 @@ menuBtn.addEventListener('click', (e) => {
 menuCloseBtn.addEventListener('click', (e) => {
   e.preventDefault()
   document.querySelector('.side-navbar').classList.remove('active-sidebar');
+})
+
+shopCart.addEventListener('click', (e) => {
+  e.preventDefault()
+  let cartModal = document.querySelector('.cart-modal');
+  cartModal.classList.toggle('cart-active')
 })
