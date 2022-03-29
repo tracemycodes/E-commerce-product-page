@@ -39,7 +39,6 @@ UIplus.addEventListener("click", (e) => {
 
 UIbtn.addEventListener("click", (e) => {
   e.preventDefault();
-
   cartUI.addToCart(cartOperation.count);
 });
 
@@ -131,6 +130,14 @@ menuCloseBtn.addEventListener('click', (e) => {
 
 shopCart.addEventListener('click', (e) => {
   e.preventDefault()
-  let cartModal = document.querySelector('.cart-modal');
-  cartModal.classList.toggle('cart-active')
+  document.querySelector('.cart-modal').classList.toggle('cart-active');
+
+
+
+  let itemCost = document.querySelector('.product-price').textContent;
+
+  cartOperation.totalPrice(itemCost)
+  cartUI.cartboxModal(itemCost, cartOperation.count, cartOperation.totalAmount)
+
+  // console.log(itemCost);
 })
