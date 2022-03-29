@@ -3,12 +3,21 @@ class CartUI {
     this.count = count;
     this.lightProductCarousel = document.querySelector('.light-product-carousel').children;
     this.thumbnailIndex = document.querySelector('.thumbnail-Index').children;
+    this.numItems = document.querySelector('.item-no');
   }
   updateCount(num) {
     this.count.textContent = num
     
   }
-  addToCart(num) {
+  addToCart(num) { 
+    let itemNo = this.numItems;
+    if (num > 0) {
+      itemNo.style.display = 'block';
+    } else {
+      itemNo.style.display = 'none';
+      
+    }
+
     document.querySelector('.item-no').textContent = num
     this.count.textContent = 0
   }
