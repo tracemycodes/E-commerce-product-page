@@ -9,7 +9,6 @@
   width: 100%;
   font-family: 'Kumbh Sans', sans-serif;
   margin: auto;
-  /* position: relative; */
 }
 .side-navbar {
   position: fixed;
@@ -18,7 +17,6 @@
   background-color: white;
   z-index: 3;
   padding: 1.9rem;
-  /* display: none; */
   transform: translateX(-17rem);
   transition: transform ease-in 0.6s;
 }
@@ -78,6 +76,7 @@ header {
   margin: 0.8rem;
   color: hsl(220, 13%, 13%);
   font-size: 1rem;
+  
 }
 .cart-modal button {
   width: calc(100% - 1.6rem);
@@ -603,3 +602,6 @@ article p {
     top: 85%;
   }
 }
+
+
+a
